@@ -5,8 +5,8 @@ from solidspy.solids_GUI import solids_GUI
 __all__ = ["assemutil",
            "femutil",
            "gaussutil",
-           "postprocesor",
-           "preprocesor",
+           "postprocessor",
+           "preprocessor",
            "solutil",
            "uelutil",
            "solids_GUI"]
