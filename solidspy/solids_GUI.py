@@ -15,11 +15,10 @@ Created by Juan Gomez and Nicolas Guarin-Zapata.
 from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
-import solidspy.preprocesor as pre
-import solidspy.postprocesor as pos
+import solidspy.preprocessor as pre
+import solidspy.postprocessor as pos
 import solidspy.assemutil as ass
 import solidspy.solutil as sol
-
 
 def solids_GUI(plot_contours=True, compute_strains=False, folder=None):
     """
@@ -51,7 +50,6 @@ def solids_GUI(plot_contours=True, compute_strains=False, folder=None):
         folder = pre.initial_params()
     start_time = datetime.now()
     echo = False
-
     # Pre-processing
     nodes, mats, elements, loads = pre.readin(folder=folder)
     if echo:
@@ -90,8 +88,6 @@ def solids_GUI(plot_contours=True, compute_strains=False, folder=None):
         return (disp_complete, strain_nodes, stress_nodes)
     else:
         return disp_complete
-
-
 
 def solids_auto(data, plot_contours=True, compute_strains=False):
     """
@@ -163,7 +159,6 @@ def solids_auto(data, plot_contours=True, compute_strains=False):
         return (disp_complete, strain_nodes, stress_nodes)
     else:
         return disp_complete
-
 
 if __name__ == '__main__':
     displacement = solids_GUI()
